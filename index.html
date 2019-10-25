@@ -19,6 +19,12 @@
 		canv.addEventListener('mousedown', function() {
 			LeftButtonMouse = true;
 		});
+		canv.addEventListener('touchstart', function() {
+			LeftButtonMouse = true;
+		});
+		canv.addEventListener('touchend', function() {
+			LeftButtonMouse = false;
+		});
 		canv.addEventListener('mouseup', function(){
 			LeftButtonMouse = false;
 			ctx.beginPath();
