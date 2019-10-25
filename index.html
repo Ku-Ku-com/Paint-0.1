@@ -41,7 +41,7 @@
 				
 			};
 		});
-		document.addEventListener('touchmove', function() {
+		canv.addEventListener('touchmove', function(e) {
 			cords.push([e.clientX, e.clientY]);
 				ctx.lineTo(e.clientX, e.clientY);
 				ctx.stroke();
