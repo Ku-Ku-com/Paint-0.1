@@ -41,6 +41,19 @@
 				
 			};
 		});
+		document.addEventListener('touchmove', function() {
+			cords.push([e.clientX, e.clientY]);
+				ctx.lineTo(e.clientX, e.clientY);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.arc(e.clientX, e.clientY, radius, 0,Math.PI * 2);
+				ctx.fill();
+
+                ctx.beginPath();
+				ctx.lineTo(e.clientX, e.clientY);
+				ctx.stroke();
+			});
 
 function save() {
 	localStorage.setItem('cords', JSON.stringify(cords));
